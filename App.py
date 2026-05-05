@@ -171,7 +171,6 @@ def _rate_limit(calls_per_minute: int):
                 time.sleep(wait)
         _api_call_times.append(time.time())
 
-
 @st.cache_resource
 def _init_engine():
     """
@@ -186,6 +185,9 @@ def _init_engine():
         return None, cfg, "⚠ No Gemini API keys found. Add GEMINI_API_KEY_1 to secrets."
 
     vsp = cfg["vector_store_path"]
+    st.write("Looking for vector store at:", vsp)
+    st.write("Path exists:", Path(vsp).exists())
+    st.write("Contents:", list(Path(vsp).iterdir()) if Path(vsp).exists() else "NOT FOUND")
     if not Path(vsp).exists():
         return None, cfg, f"⚠ Vector store not found at `{vsp}`. Commit it to the repo or set VECTOR_STORE_PATH."
 
