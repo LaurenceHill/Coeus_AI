@@ -83,11 +83,7 @@ def _load_config():
     """Load all configuration from environment / Streamlit secrets."""
     # API keys  —  GEMINI_API_KEY_1, GEMINI_API_KEY_2 … or GEMINI_API_KEY
     keys = [
-        "AIzaSyCeF0u-qBW_eKuUfYkKtC-6nJXGgsVYWIU", # Laurence
-        "AIzaSyC139N5OfKa7ZYSs-e6Tik_WmsbVc2zmfs", # Kristi
-        "AIzaSyDa4RRbfxRObWKLi6Ue8BGEEC9NEi-LVLk", # Russell
-        "AIzaSyDKc8Jrz41pZmJTzyqxdSwwRgBtentvLss", # Chris
-        "AIzaSyBd6uduSit-kAGV4h5eu5lLdps_hKvMjbY", # Connor 
+        "xxxx",
     ]
     # Try Streamlit secrets first (for cloud deployment)
     try:
