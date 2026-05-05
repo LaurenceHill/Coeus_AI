@@ -196,6 +196,7 @@ def _init_engine():
             path=vsp,
             settings=Settings(anonymized_telemetry=False),
         )
+        st.write("Collections in DB:", [c.name for c in client.list_collections()])
     except Exception as e:
         return None, cfg, f"⚠ ChromaDB init failed: {e}"
 
